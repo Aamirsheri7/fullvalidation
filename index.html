@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Login Page</title>
+    <style>
+        body{
+            text-align: center;
+            justify-content: center;
+            border: 2px solid #000;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+        }
+        form{
+            
+            text-align: center;
+        }
+        label{
+            font-weight: bold;
+        }
+        input{
+            border: 1px solid #000;
+        }
+        input:hover{
+            
+        }
+        button{
+            font-weight: bold;
+            border: 2px solid #000;
+            margin-left: 5px;
+            border-radius: 50px;
+            background-color: whitesmoke;
+        }
+        button:hover{
+            background:rgb(131, 200, 88);
+        }
+        footer{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="http://127.0.0.1:5500/registration.html">
+    <div class="container">
+        <h1>Login Page</h1>
+
+        <label for="username" >Username</label>
+        <input type="text" id="username" name="username">
+        </br></br>
+        <label for="password" >Password</label>
+        <input type="password" id="password" name="password">
+        </br></br>
+
+        <button id="submit" onclick="login()">submit</button>
+        <button type="reset">Reset</button>
+    </br></br>
+
+        <footer>username:admin </br>password:admin</footer>
+    </form>
+
+    </div>
+</body>
+<script>
+    function login(){
+
+     var user=document.getElementById("username").value;
+     var pass=document.getElementById("password").value;
+     if(user=="admin" && pass=="admin"){
+        location.assign("file:///C:/Users/Aamir/Desktop/login%20page/login.html")
+     }else{
+         window.alert("enter the default  username & password")
+     }
+
+    }
+</script>
+</html> 

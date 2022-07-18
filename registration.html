@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="registration.css">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+    <div class="container"></div>
+    <form action="http://127.0.0.1:5500/index.html" onsubmit="return validation()" id="form">
+        <center>
+            <div class="box">
+
+                <h1>Registration</h1>
+                
+            </br></br></br>
+                <!-- <label for="fname" class="required" id="saame">First Name</label><br> -->
+                <input class="first-name" type="text"  onkeyup="firstname_validate(this)" placeholder="Enter Your First Name" id="user" maxlength="20" oninput="fn1(this)" autocomplete="off" required>
+                <br>
+                <span id="ffname"></span>
+                <br><br>
+
+
+
+
+                <!-- <label for="lname" class="required" id="saame">Last Name</label><br> -->
+                <input class="last-name" type="text"  onkeyup="lastname_validate(this)" placeholder="Enter the Last Name" id="lastname" maxlength="20" oninput="nn(this)" autocomplete="off" required>
+        </br>
+                <span id="llname"></span>
+                <br><br>
+
+
+
+                <!-- <label for="fname" id="saame" class="required">Full Name</label><br> -->
+                <input type="text" onkeyup="fullname_validate(this)" placeholder="Enter Your Full Name" id="fullname" maxlength="35" oninput="fun(this);onedot(this)"  autocomplete="off" required>
+                <br>
+                <span id="flname"></span>
+                <br><br>
+           
+
+
+
+                <!-- <label for="email" id="saame" class="required">Email</label><br> -->
+                <input type="email" onkeyup="email_validate()" name="email"  id="email" oninput="space(this)" placeholder="Email" autocomplete="off" maxlength="35"  required>
+                <br>
+                <span id="eml"></span>
+                <br><br>
+
+                <!-- <label for="phone" id="saame" class="required">Phone Number</label><br> -->
+                <!-- <select name="countryCode" id="saamme">
+                    <option data-countryCode= "GB" value="44" Selected>India (+91)</option>
+                    <option data-countryCode="US" value="1">UK (+44)</option>
+                    <optgroup label="Other countries">
+                        <option data-countryCode="DZ" value="213">Algeria (+213)</option> -->
+                <!-- <label for="phone" id="saame1">Phone Number</label> -->
+                <input type="text" name="phone" onkeyup="phone_validate()" maxlength="10"
+        id="phone" placeholder="Phone Number" autocomplete="off" maxlength="30" oninput="mbno(this)" required>
+                <br>
+                <span id="phn"></span>
+                <br><br>
+
+                     <label for="images">Your Image File</label> 
+                    <input type="file" value="" name="image" id="file" onchange="validateFileType()" required accept=".png, .jpeg, .svg .gif"/> 
+                    <span id="imfile" ><i class="fa fa-times" aria-hidden="true" ></i></span>
+
+    
+
+                    </br>
+
+                    <label for="files">Your File</label>
+                    <input type="file" value="" name="file" id="txtfile" onchange="validate_txt_FileType()" required accept=".xls, .txt, .csv"/>
+                    <span id="txfile"><i class="fa fa-times" aria-hidden="true" ></i></span>
+                    </br>
+
+                   
+
+                    <label class="required" id="saame">Choose your gender:</label><br><br>
+                      <input type="radio" name="gender" id="male" value="male" >
+                      <label for="male">Male</label>
+                      <input type="radio" name="gender" id="female" value="female">         
+                      <label for="female">Female</label>
+                      <input type="radio" name="gender" id="other" value="other">         
+                      <label for="Other">Other</label>
+
+<br><br><br>
+
+                <!-- <label for="password"class="required" id="saame">Passowrd</label><br> -->
+                <input type="password" onkeyup="pasword_validation()" placeholder=" Password" id="pass" autocomplete="off" maxlength="16" oninput="space(this)" required>
+                <br>
+                <input type="checkbox" onclick="showPass()">Show Password
+                    </br>
+                <span id="pas"></span>
+                <br><br>
+
+
+                <!-- <label for="confim" class="required" id="saame">Confirm Password</label><br> -->
+                <input type="password" onkeyup="pasword_validation()" id="cpass" placeholder="Confirm-Password" autocomplete="off" maxlength="16" oninput="space(this)" required><br>
+                <input type="checkbox" onclick="ShowPass()">Show Password
+                    </br>
+                <span id="cpas"></span>
+                <br><br>
+                
+                <input type="checkbox" id="check" class="checkboox" required>
+                <label class="required" >I agree to terms and conditions. </label>
+                <br><br>
+
+                <button id="button" type="submit">Sign Up</button>
+                <br><br>
+            </div>
+        </center>
+    </form>
+</div>
+    <script src="registration.js"></script>
+</body>
+</html>
