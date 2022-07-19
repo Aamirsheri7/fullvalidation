@@ -70,11 +70,19 @@
 
      var user=document.getElementById("username").value;
      var pass=document.getElementById("password").value;
-     if(user=="admin" && pass=="admin"){
+        if(user==""&&pass==""){
+            alert("Please enter the information");
+            return false;
+         } 
+    else if(user=="admin" && pass=="123"){
          alert("Login successfully");
         window.location"registration.html";
          return false;
         }
+        else{
+        alert("Enter Valid details);
+              return false
+              }
            
      
 
