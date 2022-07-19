@@ -71,10 +71,12 @@
      var user=document.getElementById("username").value;
      var pass=document.getElementById("password").value;
      if(user=="admin" && pass=="admin"){
-        location.assign("registration.html")
-     }else{
+        location.assign("github.io/Aamirsheri7/validation/registration.html")
+     }
+        else if (user!="admin" && pass!="admin"){
+            return false;
+            else{
          window.alert("enter the default  username & password");
-         return false;
      }
 
     }
