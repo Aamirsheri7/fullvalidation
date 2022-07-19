@@ -210,11 +210,25 @@ function phone_validate(){
                 }
     
             }
+ function inputbtn(){
 
-            function rem(){
-                const fileInput = document.getElementById('file');
-                fileInput.value="";
-            }
+                        const user = document.getElementById('user');
+                        const lastname = document.getElementById('lastname');
+                        const fullname = document.getElementById('fullname');
+                        const email = document.getElementById('email');
+                        const phone = document.getElementById('phone');
+                        const pass = document.getElementById('pass');
+                        const cpass = document.getElementById('cpass');
+
+                       
+                        if(user != " " && lastname !=" " && fullname !=" " && email !=" " && phone != " " && pass !="" && cpass !=" " ){
+                         
+                           document.removeAttribute(disabled);
+                            
+                        }else{
+                            alert("fill");
+                        }
+                    }
         const fileIn = document.getElementById('imfile');
         fileIn.addEventListener('click', rem)
 
