@@ -45,15 +45,15 @@
 </head>
 
 <body>
-    <form action="registration.html" method="POST" onsubmit="return login()>
+    <form method="POST" id="form" onsubmit="return login()">
     <div class="container">
         <h1>Login Page</h1>
 
         <label for="username" >Username</label>
-        <input type="text" id="username" name="username">
+        <input type="text" id="username" name="username" autocomplete="off">
         </br></br>
         <label for="password" >Password</label>
-        <input type="password" id="password" name="password">
+        <input type="password" id="password" name="password" autocomplete="off">
         </br></br>
 
         <button id="submit">submit</button>
@@ -76,12 +76,12 @@
          } 
     else if(user=="admin" && pass=="123"){
          alert("Login successfully");
-        window.location"registration.html";
+        window.location= "registration.html";
          return false;
         }
         else{
-        alert("Enter Valid details);
-              return false
+        alert("Enter Valid details");
+              return false;
               }
            
      
